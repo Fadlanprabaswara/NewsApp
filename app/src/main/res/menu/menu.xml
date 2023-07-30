@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menuHome"
+        android:enabled="true"
+        android:icon="@drawable/icon_home"
+        android:title="Home"
+        app:cnb_iconColor="@color/purple_700" />
+    <item
+        android:id="@+id/menuSports"
+        android:enabled="true"
+        android:icon="@drawable/icon_sports"
+        android:title="Olahraga"
+        app:cnb_iconColor="@color/purple_700" />
+    <item
+        android:id="@+id/menuTechnology"
+        android:enabled="true"
+        android:icon="@drawable/icon_technolgy"
+        android:title="Teknologi"
+        app:cnb_iconColor="@color/purple_700" />
+
+</menu>

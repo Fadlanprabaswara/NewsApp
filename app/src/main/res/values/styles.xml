@@ -1,0 +1,14 @@
+<resources>
+
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here -->
+    </style>
+
+    <!-- Theme for the DetailNewsActivity that uses Toolbar -->
+    <style name="DetailNewsTheme" parent="AppTheme">
+        <!-- Customize the Toolbar style if needed -->
+        <item name="toolbarStyle">@style/Widget.AppCompat.Toolbar</item>
+    </style>
+
+</resources>
