@@ -23,7 +23,7 @@ import retrofit2.Response
 
 class FragmentSports : Fragment() {
     companion object {
-        const val API_KEY = "Your_Api key"
+        const val API_KEY = "d70fa2c3a85849f7944ae01a2d7acf69"
     }
 
     var strCountry: String? = null
