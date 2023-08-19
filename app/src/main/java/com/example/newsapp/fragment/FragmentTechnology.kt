@@ -1,5 +1,6 @@
 package com.example.newsapp.fragment
 
+import androidx.fragment.app.Fragment
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsapp.R
@@ -65,7 +65,7 @@ class FragmentTechnology : Fragment() {
 
         //set api
         val apiInterface = ApiConfig.getApiClient().create(ApiService::class.java)
-        val call = apiInterface.getSports(strCountry, strCategory, API_KEY)
+        val call = apiInterface.getTechnology(strCountry, strCategory, API_KEY)
         call.enqueue(object : Callback<ModelNews> {
             override fun onResponse(call: Call<ModelNews>, response: Response<ModelNews>) {
                 if (response.isSuccessful && response.body() != null) {

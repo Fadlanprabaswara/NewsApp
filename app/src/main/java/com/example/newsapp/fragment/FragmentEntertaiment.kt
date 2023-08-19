@@ -1,6 +1,5 @@
 package com.example.newsapp.fragment
 
-import androidx.fragment.app.Fragment
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,27 +7,28 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsapp.R
 import com.example.newsapp.adapter.NewsAdapter
 import com.example.newsapp.remote.ModelNews
 import com.example.newsapp.remote.NewsResponse
-import com.example.newsapp.remote.Utlis.getCountry
-import com.example.newsapp.retrofit.ApiConfig.getApiClient
+import com.example.newsapp.remote.Utlis
+import com.example.newsapp.retrofit.ApiConfig
 import com.example.newsapp.retrofit.ApiService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-
-class FragmentHeadline : Fragment() {
+class FragmentEntertaiment : Fragment() {
 
     companion object {
         const val API_KEY = "d70fa2c3a85849f7944ae01a2d7acf69"
     }
 
     var strCountry: String? = null
+    var strCategory = "entertainment"
     var modelArticle: MutableList<NewsResponse> = ArrayList()
     var newsAdapter: NewsAdapter? = null
     lateinit var rvListNews: RecyclerView
@@ -61,11 +61,11 @@ class FragmentHeadline : Fragment() {
     //set api
     private fun getListNews() {
         //get country
-        strCountry = getCountry()
+        strCountry = Utlis.getCountry()
 
         //set api
-        val apiInterface = getApiClient().create(ApiService::class.java)
-        val call = apiInterface.getHeadlines(strCountry, API_KEY)
+        val apiInterface = ApiConfig.getApiClient().create(ApiService::class.java)
+        val call = apiInterface.getEntertainment(strCountry, strCategory, API_KEY)
         call.enqueue(object : Callback<ModelNews> {
             override fun onResponse(call: Call<ModelNews>, response: Response<ModelNews>) {
                 if (response.isSuccessful && response.body() != null) {
@@ -87,4 +87,3 @@ class FragmentHeadline : Fragment() {
         })
     }
 }
-

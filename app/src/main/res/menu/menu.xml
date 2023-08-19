@@ -19,5 +19,24 @@
         android:icon="@drawable/icon_technolgy"
         android:title="Teknologi"
         app:cnb_iconColor="@color/purple_700" />
+    <item
+        android:id="@+id/menuBusiness"
+        android:enabled="true"
+        android:icon="@drawable/icon_business"
+        android:title="Busines"
+        app:cnb_iconColor="@color/purple_700" />
+    <item
+        android:id="@+id/menuEnternatiment"
+        android:enabled="true"
+        android:icon="@drawable/icon_enternatiment"
+        android:title="Enternatiment"
+        app:cnb_iconColor="@color/purple_700" />
+    <item
+        android:id="@+id/menuHealty"
+        android:enabled="true"
+        android:icon="@drawable/icon_health"
+        android:title="health"
+        app:cnb_iconColor="@color/purple_700" />
+
 
 </menu>

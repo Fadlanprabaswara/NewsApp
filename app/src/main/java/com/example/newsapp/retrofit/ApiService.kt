@@ -26,4 +26,25 @@ interface ApiService {
         @Query("category") category: String?,
         @Query("apiKey") apiKey: String?
     ): Call<ModelNews>
+
+    @GET("top-headlines")
+    fun getBusiness(
+        @Query("country") country: String?,
+        @Query("category") category: String?,
+        @Query("apiKey") apiKey: String?
+    ): Call<ModelNews>
+
+    @GET("top-headlines")
+    fun getEntertainment(
+        @Query("country") country: String?,
+        @Query("category") category: String?,
+        @Query("apiKey") apiKey: String?
+    ): Call<ModelNews>
+
+    @GET("top-headlines")
+    fun getHealth(
+        @Query("country") country: String?,
+        @Query("category") category: String?,
+        @Query("apiKey") apiKey: String?
+    ): Call<ModelNews>
 }
