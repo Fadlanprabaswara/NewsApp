@@ -47,4 +47,11 @@ interface ApiService {
         @Query("category") category: String?,
         @Query("apiKey") apiKey: String?
     ): Call<ModelNews>
+
+    @GET("everything")
+    fun getNewsSearch(
+        @Query("q") keyword: String?,
+        @Query("language") language: String?,
+        @Query("apiKey") apiKey: String?
+    ): Call<ModelNews>
 }

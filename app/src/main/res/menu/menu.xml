@@ -37,6 +37,12 @@
         android:icon="@drawable/icon_health"
         android:title="health"
         app:cnb_iconColor="@color/purple_700" />
+    <item
+        android:id="@+id/menuSearch"
+        android:enabled="true"
+        android:icon="@drawable/icon_search"
+        android:title="search"
+        app:cnb_iconColor="@color/purple_700" />
 
 
 </menu>
